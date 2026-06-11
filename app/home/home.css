@@ -1,0 +1,132 @@
+.home{
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+.hero{
+    height: clamp(250px,30vw,500px);
+    width: 100%;  
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: -1;
+   
+
+    background-color: transparent;
+    
+
+}
+
+.hero div{
+    background-color: transparent
+}
+
+#greeting{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    display: inline-block;
+    padding: 0%;
+}
+
+
+
+
+/*<----------------------------Scroll Display--------------------------------->*/
+
+.skill-carousel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    height: 130%;
+    max-width: 500px;
+    
+
+    /* border-color: rgb(0, 196, 49);
+    border-width: 1px; */
+}
+/* .skill-carousel:nth-of-type(3){
+    animation-delay: 2s;
+} */
+.skill-carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.skill-group{
+    display: flex;
+    flex-direction: column;
+    animation: spin 5s linear infinite;
+    animation-delay: inherit;
+    gap:1em;
+    padding-bottom: 1em;
+}
+
+.skill-display{
+    /* flex: 0 0 1; */
+    position: relative;
+    width: 110%;
+    display: grid;
+    
+    animation: spin 5s;
+    place-items: center;
+    align-items: center;
+    justify-content: center;
+    will-change: transform;
+}
+
+
+@keyframes spin{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+.skill-group .box{
+    width:100%;
+    height:100%;
+}
+
+.skill-group .skillSvg{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 45%;
+    
+    translate: 0% -50%;
+    z-index: 1;
+  
+}
+
+.skillSvg path{
+    fill:#735CDD;
+}
+
+.skill-label {
+  fill: #735CDD;
+  font-weight: 700;
+  font-family: Overlock, serif;
+  font-size: 36px;           
+  text-anchor: middle;       
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+/*<----------------------------Project Cmp--------------------------------->*/
+.proj-section{
+    box-shadow: hsla(45, 52%, 51%, 0.07) 0 -10px 10px;
+}
+.project-group{
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}

@@ -1,0 +1,8 @@
+.navbar{
+    position:relative;
+    z-index: 2;
+    height: 2rem;
+    padding: 5px;
+    background: var(--bg-color);
+    box-shadow: var(--glow);
+}

@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Prod1",
+        "shortDesc":"this is a test",
+        "date":"yyyy-mm-ddTHH:mm:ss.sssZ",
+        "imgPath":"",
+        "techStack":["React"]
+    },
+    {
+        "name":"test1",
+        "shortDesc":"this is a test",
+        "date":"yyyy-mm-ddTHH:mm:ss.sssZ",
+        "imgPath":"",
+        "techStack":["React"]
+    },
+    {
+        "name":"test2",
+        "shortDesc":"this is a test",
+        "date":"yyyy-mm-ddTHH:mm:ss.sssZ",
+        "imgPath":"",
+        "techStack":["React"]
+    },
+    {
+        "name":"test3",
+        "shortDesc":"this is a test",
+        "date":"yyyy-mm-ddTHH:mm:ss.sssZ",
+        "imgPath":"",
+        "techStack":["React"]
+    }
+]
