@@ -1,0 +1,3 @@
+Welcome to my page. I am a software engineer who spends every day learning lessons, from computer tutorials to the human experience. Pacing myself through my education at Rochester Institute of Technology, I find time for personal projects and coursework. I love learning by making cool projects for my hobbies, and with each passing day, I expand my repertoire.
+
+I am currently well-versed in React, PostgreSQL, Python, and Unit Testing. I have practice in both front-end and back-end technologies, as well as some experience with embedded technology. Moreover, I am always looking for ways to explore new horizons and apply my abilities.

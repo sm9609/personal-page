@@ -1,0 +1,50 @@
+.hero {
+	display: flex;
+	flex-direction: row;
+	overflow: visible;
+	height: clamp(250px, 30vw, 500px);
+	width: 100%;
+	padding-left: 1rem;
+
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	z-index: -1;
+	background-color: transparent;
+}
+
+
+
+#greeting h1 span {
+	color: var(--secondary-color-cool);
+	text-shadow: 0 0 15px var(--secondary-color);
+	animation: flickerText 1.8s 1 forwards;
+	animation-play-state: paused;
+	
+}
+
+@keyframes flickerText {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    color: var(--secondary-color);
+    text-shadow: 0 0 6px ;
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    color: #8b7d52;
+    text-shadow: none;
+    opacity: 0.75;
+  }
+}
+
+#greeting {
+	display: inline-block;
+	padding-top: 40px;
+	padding-left: 0%;
+	margin-bottom: 20px;
+}
+
+.buttons {
+	display: flex;
+    gap: 8px;
+}

@@ -1,6 +1,6 @@
 import type { Route } from "./+types/welcome";
 import { Home } from "../home/home";
-import Navbar from '../home/components/navbar'
+import Navbar from '../home/components/Navbar'
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Welcome" },
@@ -11,7 +11,6 @@ export function meta({}: Route.MetaArgs) {
 export default function Welcome () {
   return(
   <>
-    <Navbar/>
     <Home/>
   </>
 );}

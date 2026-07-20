@@ -1,0 +1,52 @@
+
+.button-deck{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    
+}
+
+.skill-group{
+    justify-content: center;
+    padding: 15px;
+
+    border-radius: 6px;
+    background-color: var(--bg-secondary);
+    box-shadow: inset black 0 0 5px 3px;
+}
+
+.skill-array{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap:8px;
+}
+
+.skill-card{
+    width:100%;
+    
+    justify-items: center;
+
+    border-radius: 6px;
+    background-color: var(--bg-primary);
+    box-shadow: black 0px 2px 4px 1px ;
+}
+
+.skill-card:hover{
+    transform: scale(1.1);
+}
+
+.icon{
+    width: 150px;
+    height: 200px;
+}
+
+.icon path{
+    fill:var(--secondary-color)
+}
+
+.label{
+    color:var(--secondary-color)
+    
+}

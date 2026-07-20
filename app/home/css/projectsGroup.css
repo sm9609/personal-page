@@ -1,0 +1,124 @@
+/*<----------------------------Project Cmp--------------------------------->*/
+.project-group{
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    justify-items: center;
+   	justify-content: center;
+   	gap:15px;
+}
+
+.project {
+	--name-width: clamp(10rem, 75%, 25rem);
+
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	width: clamp(100px, 100%, 520px);
+	border-color: var(--primary-color);
+	border-radius: 5px;
+	border-width: 1px;
+	background-color: var(--bg-secondary);
+	padding: 10px;
+}
+
+.project-info {
+	display: grid;
+	grid-template-columns: 1fr 1px auto;
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+		"project-name divider project-date"
+		"project-desc project-desc project-desc";
+	justify-content: baseline;
+	align-items: center;
+
+	background-color: transparent;
+}
+
+.text-divider {
+	grid-area: divider;
+}
+
+.project:hover {
+	box-shadow: #7b59ba 0 0 10px;
+	transform: scale(1.01);
+}
+.project-name {
+	grid-area: project-name;
+	display: inline-block;
+	padding-right: 15px;
+	overflow-x: hidden;
+
+	color: var(--primary-color);
+}
+.project-name span {
+	display: inline-block;
+	white-space: nowrap;
+	transition: all 1s ease-out;
+}
+
+.project:hover .project-name span {
+	animation: marquee 0.5s linear 0.5s forwards;
+	transition: all 1s ease-out;
+}
+
+@keyframes marquee {
+	to {
+		transform: translateX(calc(-100% + var(--name-width) + -1rem));
+	}
+}
+
+.project-date {
+	grid-area: project-date;
+	width:7rem;
+	color: #4d4b46;
+	font-family: var(--font-name);
+	font-size: 24px;
+
+	margin-left: 10px;
+	align-self: center;
+}
+
+.project-desc {
+	grid-area: project-desc;
+}
+.project-img {
+	position: relative;
+	background-color: transparent;
+	object-fit: cover;
+	width: 100%;
+	height: 300px;
+	border-radius: 5px;
+	overflow: hidden;
+	z-index: 2;
+}
+.project-img img {
+	position: relative;
+	border-radius: inherit;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 50% 0%;
+}
+
+.project-img::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	box-shadow: inset var(--text-secondary-glow);
+	pointer-events: none;
+	z-index: 2;
+}
+
+.techstack-sec {
+	background-color: transparent;
+	display: flex;
+	gap: 10px;
+}
+.tech-emblem {
+	background-color: hsla(251, 65%, 61%, 0.6);
+	border-radius: 15%;
+	border-width: 2px;
+	border-color: var(--secondary-color);
+}

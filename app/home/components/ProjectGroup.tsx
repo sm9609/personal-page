@@ -1,20 +1,23 @@
-import ProjectView from "./components/ProjectView"
-import './types'
+import ProjectCard from "./ProjectCard"
+import '../types'
 type props = {
     projects:project[]
 }
 export default function ProjectGroup({projects}:props) {
     return(
+	<div className='proj-section'>
+		<h1 className='section-header'>Projects</h1>
         <div className="project-group">
             {projects.map((p)=>(
-                <ProjectView key={p.name}
+                <ProjectCard key={p.name}
                     name={p.name}
                     shortDesc={p.shortDesc}
                     date={p.date}
-                    imgPath={p.imgPath}
+                    svgPath={p.imgPath}
                     techStack={p.techStack}
                 />
             ))}
         </div>
+	</div>
     )
 }

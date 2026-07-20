@@ -1,0 +1,9 @@
+.navbar {
+	justify-self: center;
+	position: relative;
+	z-index: 2;
+	height: 2rem;
+	width: 100%;
+	padding: 5px;
+	box-shadow: var(--primary-glow);
+}

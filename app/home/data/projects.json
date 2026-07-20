@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Wordle Clone",
+        "shortDesc":"This was one of my first experiences using react and managing state. In making this I learn the value of lifting up states to your root component.",
+        "date":"2025-12-24T10:50:00Z",
+        "imgPath":"/thumbnails/sams_wordle.png",
+        "techStack":["React","Java"]
+    },
+    {
+        "name":"Chronos Task Timer",
+        "shortDesc":"this is a test",
+        "date":"2026-12-25T10:30:00Z",
+        "imgPath":"/thumbnails/Chronos-Time-Tracker.png",
+        "techStack":["React","TypeScript","Vite","PostgreSQL"]
+    },
+    {
+        "name":"RideShare",
+        "shortDesc":"this is a test",
+        "date":"2024-12-25T10:30:00Z",
+        "imgPath":"/thumbnails/rideshare.png",
+        "techStack":["Python","PostgreSQL"]
+    },
+    {
+        "name":"Midi Music Player",
+        "shortDesc":"This projected featured the STM32 NUCLEO-L452RE micro-prossescor. ",
+        "date":"2024-12-25T10:30:00Z",
+        "imgPath":"/thumbnails/stmcube32Midi.png",
+        "techStack":["C"]
+    },
+    {
+        "name":"NutriApp",
+        "shortDesc":"A Semester long subsystems design project that focused primarily on planning. During this project I planned out and implemented 4 different Subsystem designs. While colaborating with team members to assimimalate my designs with the rest of the project.",
+        "date":"2024-12-25T10:30:00Z",
+        "imgPath":"/thumbnails/nutriapp.png",
+        "techStack":["Java"]
+    }
+]
