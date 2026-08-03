@@ -1,0 +1,64 @@
+.textCard{
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    gap: 15px;
+    height: 50%;
+    max-width: 80%;
+    margin: 4px 0 8px 0
+    
+    
+
+}
+
+
+
+.textCard-img{
+    position: relative;
+	object-fit: cover;
+	width: clamp(100px,30%,300px);
+	height: clamp(100px,50%,300px);
+	border-radius: 5px;
+	overflow: hidden;
+    
+}
+
+.textCard-img img{
+    position: relative;
+	border-radius: inherit;
+	display: block;
+	object-fit: cover;
+	object-position: 50% 0%;
+    
+}
+
+.textCard p{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding-top: 1%;
+    width: 60%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: var(--bg-secondary);
+    box-shadow: inset black 0 0 3px 1px;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 0 8px 0 8px;
+}
+
+@media (max-width:800px){
+    .textCard{
+       flex-direction: column;
+       align-items: center;
+    }
+    .textCard-img img{
+        align-items: center;
+        justify-self: center;
+    }
+    .textCard p{
+        width:100%
+    }
+}

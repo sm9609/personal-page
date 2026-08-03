@@ -12,6 +12,10 @@
 	position: relative;
 	z-index: -1;
 	background-color: transparent;
+	@media (max-width:425px){
+		flex-direction: column;
+		height: auto;
+	}
 }
 
 
@@ -42,6 +46,7 @@
 	padding-top: 40px;
 	padding-left: 0%;
 	margin-bottom: 20px;
+
 }
 
 .buttons {

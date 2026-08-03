@@ -3,21 +3,21 @@ import '../css/DButton.css'
 import SkillCarousel from './SkillCarousel'
 import skills from '../data/skills.json'
 import DButton from './DButton'
-
 import LinkedInIcon from '../../icons/LinkedInIcon'
 import GithubIcon from '../../icons/GithubIcon'
 import { useEffect, useState } from 'react'
+import useWindowSize from "../hooks/useWindowSize"
 
-type props = {
-    pageWidth:number
-}
-export default function Hero({pageWidth}:props) {
+export default function Hero() {
     const [textFlicker, setTextFlicker] = useState<'running'|'paused'>('paused')
-
+    const {pageWidth} = useWindowSize()
     let skillColumns:number=2;
-
+    console.log(pageWidth)
     if(pageWidth > 1400){
         skillColumns = 3
+    }
+    else if(pageWidth < 425){
+      skillColumns = 1
     }
     
     useEffect(()=>{

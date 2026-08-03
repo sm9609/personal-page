@@ -1,32 +1,41 @@
 import './css/home.css'
 import {useRef,useEffect,useState} from 'react'
-import skills from './data/skills.json'
 import projects from './data/projects.json'
-import Background from './components/Background'
 import Hero from './components/Hero'
-import AboutMe from './components/AboutMe'
+import TextCard from './components/TextCard'
 import ProjectGroup from './components/ProjectGroup'
 import SkillGroup from './components/SkillGroup'
+import abtMe1 from './data/aboutMe1.txt?raw'
+import abtMe2 from'./data/aboutMe2.txt?raw'
+import abtMe3 from './data/aboutMe3.txt?raw'
 
 export function Home() {
-  const [pageWidth, setPageWidth] = useState(0)
-
-  let homeDiv = useRef<HTMLDivElement|null>(null)
-  useEffect(()=>{
-    if(homeDiv.current){
-      let homeDivWidth = homeDiv.current.offsetWidth
-      setPageWidth(homeDivWidth)
-    }else{
-      console.warn("homeDiv ref is Null")
-    }
-  },[])
   return (
-  <div className='home' ref={homeDiv}>
-    <Hero pageWidth={pageWidth}/>
+  <div className='home'>
+    <Hero/>
     <div className='section-container'>
       <div className='divider'></div>
-      <Background/>
-      <AboutMe/>
+      <div className="abt-me-section">
+        <h1 className="section-header">About Me</h1>
+        <div className="textCard">
+          <div className="textCard-img">
+            <img src='./assets/Me.jpeg'></img>
+          </div>
+          <p>{abtMe1}</p>
+        </div>
+        <div className="textCard">
+          <p>{abtMe2}</p>
+          <div className="textCard-img">
+            <img src='./assets/rit-overhead.jpg'></img>
+          </div>
+        </div>
+        <div className="textCard">
+          <div className="textCard-img">
+            <img src='./assets/Me.jpeg'></img>
+          </div>
+          <p>{abtMe3}</p>
+        </div>
+      </div>
       <SkillGroup/>   
       <ProjectGroup projects={projects}/>
     </div>

@@ -1,0 +1,55 @@
+#background{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    position: fixed;
+    background-size:cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: -100;
+}
+
+#circuit-tile{
+  
+}
+#tileBackground {
+	fill: #363636;
+}
+#traces path {
+  display: inline;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 0.656;
+  stroke-opacity: 0;
+}
+#foreground{
+  display: inline;
+  fill: #202123;
+  fill-opacity: 1;
+  stroke: none;
+  stroke-width: 0.267744;
+}
+
+#follow{
+  fill: var(--secondary-color);
+  offset-path: var(--trace-path);
+  offset-distance: 0%;
+  offset-rotate: auto;
+  animation: trace-run 3s ease-in-out infinite;
+}
+
+
+@keyframes trace-run {
+  0%{
+    opacity: 0%;
+  }
+  50%{
+    opacity: 100%;
+  }
+  100%{
+    opacity: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}

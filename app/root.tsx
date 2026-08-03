@@ -6,7 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
-
+import Background from "~/home/components/Background";
 import type { Route } from "./+types/root";
 import "./root.css";
 
@@ -37,6 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Background/>
         {children}
         <ScrollRestoration />
         <Scripts />

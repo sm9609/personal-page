@@ -1,37 +1,35 @@
 
+
 .skill-carousel{
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-y: scroll;
+    overflow-x: hidden;
     height: 130%;
-    max-width: 500px;
+    max-width: fit-content;
     
-
-    /* border-color: rgb(0, 196, 49);
-    border-width: 1px; */
 }
-/* .skill-carousel:nth-of-type(3){
-    animation-delay: 2s;
-} */
+
 .skill-carousel::-webkit-scrollbar{
     display: none;
 }
 
 .skill-spin{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap:1em;
     padding-bottom: 1em;
     animation: spin 8s linear infinite;
-    animation-delay: inherit;
-    
 }
+
 
 .skill-display{
     flex: 0 0 1;
+    display: flex;
     position: relative;
     width: 110%;
-    display: grid;
+    
     
     animation: spin 5s;
     place-items: center;
@@ -42,17 +40,20 @@
 
 
 @keyframes spin{
-    0%{
-        transform: translateY(0%);
+    to{
+        transform: translateY(100%); 
     }
-    100%{
-        transform: translateY(100%);
+}
+
+@keyframes spin-mobile {
+    to{
+        transform: translateX(100%);
     }
 }
 
 .skill-spin .box{
     width:100%;
-    height:100%;
+    height:80%;
 }
 
 .skill-spin .skillSvg{
@@ -60,7 +61,6 @@
     width: 50%;
     height: 50%;
     top: 45%;
-    
     translate: 0% -50%;
     z-index: 1;
   
@@ -78,4 +78,30 @@
   text-anchor: middle;       
   dominant-baseline: middle;
   pointer-events: none;
+  visibility: hidden;
+}
+
+@media(max-width:425px){
+    .skill-spin{
+        flex-direction: row;
+        animation-name: spin-mobile;
+        animation-play-state: paused;
+        padding-bottom: 0em;
+        height:100px
+    }
+
+    .skil-display{
+        height: 100%;
+        width: 50px;
+    }
+
+    .skill-carousel{
+        flex-direction:row;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .skill-label{
+        visibility: hidden;
+    }
 }
