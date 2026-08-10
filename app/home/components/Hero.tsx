@@ -11,13 +11,12 @@ import useWindowSize from "../hooks/useWindowSize"
 export default function Hero() {
     const [textFlicker, setTextFlicker] = useState<'running'|'paused'>('paused')
     const {pageWidth} = useWindowSize()
-    let skillColumns:number=2;
-    console.log(pageWidth)
-    if(pageWidth > 1400){
-        skillColumns = 3
+    let smallScreen:boolean = false;
+    if(pageWidth > 425){
+        smallScreen = false
     }
     else if(pageWidth < 425){
-      skillColumns = 1
+      smallScreen = true
     }
     
     useEffect(()=>{
@@ -32,7 +31,7 @@ export default function Hero() {
     
     return(
     <div className='hero'>
-      <SkillCarousel skills={skills} columns={skillColumns}/>
+      <SkillCarousel show={smallScreen} skills={skills}/>
       <div id="greeting">
         <h1 >Hello, welcome to 
             <br></br>
@@ -56,7 +55,8 @@ export default function Hero() {
           </DButton>
         </div>
       </div>
-        <SkillCarousel skills={skills} columns={skillColumns}/>
+        <SkillCarousel skills={skills}/>
+        <SkillCarousel show={!smallScreen} skills={skills}/>
     </div> 
     )
 }

@@ -1,41 +1,40 @@
 import '../css/skillCarsousel.css'
 import Display from './SkillDisplay'
 import '../types'
+import { useEffect, useState } from 'react'
 
-export default function SkillCarousel ({skills=[], columns=3}:{skills:SkillType[], columns:number}){
-    const columnNum = new Array(columns).fill(null)
-    const skillQueue: SkillType[] = [...(skills as SkillType[])]
-    // .sort(() => Math.random() - 0.5)
+export default function SkillCarousel ({skills=[],show=true}:{skills:SkillType[], show?:boolean}){
+    const [skillQueue,setSkillQueue] = useState<SkillType[]>()
+    let SkillQueue: SkillType[] = [...(skills as SkillType[])];
 
+    const group = (
+        <div className="skill-spin">
+            {skillQueue?.map((skill)=>(
+                <Display 
+                    key={skill.name}
+                    icon={skill.path}
+                    label={skill.name}
+                    viewbox={skill.viewbox}
+                    offset={skill.offset}
+                />
+            ))}
+        </div>
+    )
 
-
+    useEffect(()=>{
+        setSkillQueue(SkillQueue.sort(() => Math.random() - 0.5))
+        console.log(SkillQueue)
+    },[])
+    
     return(<>
-        {columnNum.map((_,i)=>(
-            <div key={i}  className="skill-carousel">
-                <div className="skill-spin">
-                    {skillQueue.map((skill)=>(
-                        <Display 
-                            key={skill.name}
-                            icon={skill.path}
-                            label={skill.name}
-                            viewbox={skill.viewbox}
-                            offset={skill.offset}
-                        />
-                    ))}
+            {show?
+                <div className="skill-carousel">
+                    {group}
+                    {group}
                 </div>
-                <div aria-hidden className="skill-spin">
-                    {skillQueue.map((skill)=>(
-                        <Display 
-                            key={skill.name}
-                            icon={skill.path}
-                            label={skill.name}
-                            viewbox={skill.viewbox}
-                            offset={skill.offset}
-                        />
-                    ))}
-                </div>
-            </div>
-        ))}
+                :
+                <></>
+            }
     </>)
     
 }
