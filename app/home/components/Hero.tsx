@@ -32,6 +32,7 @@ export default function Hero() {
     
     return(
     <div className='hero'>
+      <SkillCarousel skills={skills} columns={skillColumns}/>
       <div id="greeting">
         <h1 >Hello, welcome to 
             <br></br>

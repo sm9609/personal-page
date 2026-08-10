@@ -8,18 +8,29 @@ export default function Background() {
 	const {pageWidth,pageHeight} = useWindowSize()
 	const yTiles = Math.ceil(pageHeight / tileHeight);
 	const xTiles = 1 + Math.ceil(pageWidth / tileWidth);
-	const totalTiles = yTiles * xTiles;
+	const totalTiles = pageWidth > 425 ? yTiles * xTiles : xTiles * 2;
+	const tiles = Array.from(
+		{ length: totalTiles }, (_, i) => (<CircuitTile key={`${i}`} />)
+	);
 
-	const tiles = Array.from({ length: totalTiles }, (_, i) => (
-		<CircuitTile key={`${i}`} />
-	));
-
-	const gridStyle = {
+	let gridStyle;
+	
+	if(pageWidth > 425){
+		gridStyle = {
 		gridTemplateColumns: `repeat(${xTiles},${tileWidth}px`,
+		gridTemplateRows: `repeat(${yTiles},${tileHeight}px`,
+	};
+	}
+	else{
+		gridStyle = {
+		gridTemplateColumns:`1fr 1fr`,
 		gridTemplateRows: `repeat(${yTiles},${tileHeight}px`,
 		justifyContent: "start",
 		alignContent: "start",
 	};
+	}
+	
+	
 
 	useEffect(() => {}, []);
 	return (

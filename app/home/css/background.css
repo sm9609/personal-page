@@ -3,15 +3,14 @@
     height: 100vh;
     display: grid;
     position: fixed;
+    justify-content: start;
+    align-items: start;
     background-size:cover;
     background-position: center;
     overflow: hidden;
     z-index: -100;
 }
 
-#circuit-tile{
-  
-}
 #tileBackground {
 	fill: #363636;
 }
@@ -52,4 +51,9 @@
   to {
     offset-distance: 100%;
   }
+}
+
+@media (max-width:425px) {
+
+
 }

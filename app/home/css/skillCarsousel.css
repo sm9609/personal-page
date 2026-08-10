@@ -30,8 +30,6 @@
     position: relative;
     width: 110%;
     
-    
-    animation: spin 5s;
     place-items: center;
     align-items: center;
     justify-content: center;
@@ -85,20 +83,20 @@
     .skill-spin{
         flex-direction: row;
         animation-name: spin-mobile;
-        animation-play-state: paused;
         padding-bottom: 0em;
-        height:100px
+        height:100%;
     }
 
-    .skil-display{
-        height: 100%;
-        width: 50px;
+    .skill-display{
+        height: 100px;
+        width: 100px;
     }
 
     .skill-carousel{
         flex-direction:row;
         overflow-y: hidden;
         overflow-x: scroll;
+       
     }
 
     .skill-label{
