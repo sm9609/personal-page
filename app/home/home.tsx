@@ -23,18 +23,6 @@ export function Home() {
           </div>
           <p>{abtMe1}</p>
         </div>
-        <div className="textCard">
-          <p>{abtMe2}</p>
-          <div className="textCard-img">
-            <img src='./assets/rit-overhead.jpg'></img>
-          </div>
-        </div>
-        <div className="textCard">
-          <div className="textCard-img">
-            <img src='./assets/Me.jpeg'></img>
-          </div>
-          <p>{abtMe3}</p>
-        </div>
       </div>
       <SkillGroup/>   
       <ProjectGroup projects={projects}/>
